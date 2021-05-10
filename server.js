@@ -6,24 +6,24 @@ const  multer   = require ('multer')
 const upload = multer({ dest: './public/images' })
 
 //nivel 1
-const person = {
-  name: "Moncho",
-  age: 46,
-};
+// const person = {
+//   name: "Moncho",
+//   age: 46,
+// };
 
-app.get("/user", function (req, res) {
-  res.json({
-    user: person,
-    urlRequest: req.url,
-  });
-});
+// app.get("/user", function (req, res) {
+//   res.json({
+//     user: person,
+//     urlRequest: req.url,
+//   });
+// });
 
-//nive2 ejercicio 1
+//nivel2 ejercicio 1
 
-app.get("/pp", function (req, res) {
+app.get("/index", function (req, res) {
   res.sendFile(path.resolve(__dirname, "views/index.html"));
 });
-app.get("/p", function (req, res) {
+app.get("/about", function (req, res) {
   res.sendFile(path.resolve(__dirname, "views/about.html"));
 });
 
